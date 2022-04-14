@@ -1,0 +1,12 @@
+.bloc{
+    &__line{
+        display: flex;
+        &__space{
+            white-space: pre;
+        }
+        &__number{
+            text-align: right;
+            margin-left: 1ch;
+        }
+    }
+}
