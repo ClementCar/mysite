@@ -1,17 +1,19 @@
 .bloc{
     &__line{
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         &__space{
             white-space: pre;
         }
         &__number{
-            // text-align: right;
-            background-color: red;
+            text-align: right;
             width: 3ch;
         }
         &__sign{
             color: red;
+        }
+        &__text{
+            flex-wrap: wrap;
         }
     }
 }
