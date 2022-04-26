@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FolioComponent } from './folio/folio.component';
 import { ContactComponent } from './contact/contact.component';
 import { CvComponent } from './cv/cv.component';
+import { SkillComponent } from './skill/skill.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CvComponent } from './cv/cv.component';
     HeaderComponent,
     FolioComponent,
     ContactComponent,
-    CvComponent
+    CvComponent,
+    SkillComponent
   ],
   imports: [
     BrowserModule
