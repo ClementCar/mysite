@@ -8,6 +8,7 @@ import { FolioComponent } from './folio/folio.component';
 import { ContactComponent } from './contact/contact.component';
 import { CvComponent } from './cv/cv.component';
 import { SkillComponent } from './skill/skill.component';
+import { FilesComponent } from './files/files.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SkillComponent } from './skill/skill.component';
     FolioComponent,
     ContactComponent,
     CvComponent,
-    SkillComponent
+    SkillComponent,
+    FilesComponent
   ],
   imports: [
     BrowserModule
