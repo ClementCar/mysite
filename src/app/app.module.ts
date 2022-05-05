@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CvComponent } from './cv/cv.component';
 import { SkillComponent } from './skill/skill.component';
 import { FilesComponent } from './files/files.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FilesComponent } from './files/files.component';
     FilesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

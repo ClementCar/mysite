@@ -1,3 +1,5 @@
+// @import '../../style/variables';
+
 .bloc{
     &__line{
         display: flex;
@@ -10,7 +12,7 @@
             width: 3ch;
         }
         &__sign{
-            color: red;
+            color: var(--color);
         }
         &__text{
             flex-wrap: wrap;
