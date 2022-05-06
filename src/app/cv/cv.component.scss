@@ -1,18 +1,24 @@
 // @import '../../style/variables';
 
 .bloc{
+    width: 90%;
+    margin: 0 auto;
     &__line{
         display: flex;
         // flex-wrap: wrap;
         &__space{
-            white-space: pre;
+            width: 2ch;
         }
         &__number{
             text-align: right;
             width: 3ch;
+            min-width: 3ch;
         }
         &__sign{
-            color: var(--color);
+            color: var(--light-sign);
+        }
+        &__tag{
+            color: var(--light-tag);
         }
         &__text{
             flex-wrap: wrap;
