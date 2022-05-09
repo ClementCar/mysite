@@ -3,9 +3,18 @@ header{
     & ul{
         display: flex;
         justify-content: space-around;
+        padding: 0;
         & li {
             cursor: pointer;
             list-style: none;
+            background-color: yellow;
+            padding: 5px;
         }
     }
+}
+
+
+// améliorer
+.active-link{
+    transform: scale(1.5);
 }
