@@ -1,5 +1,20 @@
 .bloc{
+    width: 90%;
+    margin: 0 auto;
     &__line{
         display: flex;
+        &__space{
+            width: 2ch;
+        }
+        &__number{
+            width: 3ch;
+            text-align: right;
+        }
+        &__sign{
+            color: var(--light-sign);
+        }
+        &__tag{
+            color: var(--light-tag);
+        }
     }
 }
