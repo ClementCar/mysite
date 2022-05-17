@@ -1,6 +1,22 @@
 :root{
-    --color: red;
-    --light-sign: #8b9a9f;
+    --light-sass-text: red;
+    --light-number: #8b9a9f;
+    --light-sign: #4c768f;
     --light-tag: #62260a;
     --light-letter: black;
+    --light-info: #2276cc;
+}
+
+[data-theme="light"] {
+    --sass-text: red;
+    --number: #8b9a9f;
+    --sign: #4c768f;
+    --tag: #62260a;
+    --letter: black;
+    --info: #2276cc;
+    --background: #fdfef6;
+}
+
+[data-theme="dark"] {
+    --background: black;
 }

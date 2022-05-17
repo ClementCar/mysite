@@ -9,12 +9,19 @@
         &__number{
             width: 3ch;
             text-align: right;
+            min-width: 3ch;
         }
         &__sign{
             color: var(--light-sign);
         }
         &__tag{
             color: var(--light-tag);
+        }
+        &__text{
+            color: var(--light-sass-text);
+        }
+        &__info{
+            color: var(--light-info);
         }
     }
 }

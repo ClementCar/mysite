@@ -8,5 +8,10 @@ if (environment.production) {
   enableProdMode();
 }
 
+// function darkMode () {
+//   let body = document.querySelector('body')
+//   let mode = body.dataset.mode 
+// }
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
