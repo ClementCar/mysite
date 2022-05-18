@@ -1,13 +1,13 @@
-:root{
-    --light-sass-text: red;
-    --light-number: #8b9a9f;
-    --light-sign: #4c768f;
-    --light-tag: #62260a;
-    --light-letter: black;
-    --light-info: #2276cc;
-}
+// :root{
+//     --light-sass-text: red;
+//     --light-number: #8b9a9f;
+//     --light-sign: #4c768f;
+//     --light-tag: #62260a;
+//     --light-letter: black;
+//     --light-info: #2276cc;
+// }
 
-[data-theme="light"] {
+.light-theme {
     --sass-text: red;
     --number: #8b9a9f;
     --sign: #4c768f;
@@ -17,6 +17,12 @@
     --background: #fdfef6;
 }
 
-[data-theme="dark"] {
+.dark-theme {
+    --sass-text: red;
+    --number: #8b9a9f;
+    --sign: yellow;
+    --tag: #62260a;
+    --letter: black;
+    --info: #2276cc;
     --background: black;
 }

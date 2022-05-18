@@ -12,16 +12,16 @@
             min-width: 3ch;
         }
         &__sign{
-            color: var(--light-sign);
+            color: var(--sign);
         }
         &__tag{
-            color: var(--light-tag);
+            color: var(--tag);
         }
         &__text{
-            color: var(--light-sass-text);
+            color: var(--sass-text);
         }
         &__info{
-            color: var(--light-info);
+            color: var(--info);
         }
     }
 }

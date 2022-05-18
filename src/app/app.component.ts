@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,8 +7,26 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'mysite';
+  theme: Theme = 'light-theme';
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    @Inject(DOCUMENT) private document: Document,
+    private renderer: Renderer2
+  ) {}
+
+  ngOnInit(): void {
+    this.initializeTheme();
+  }
+
+  switchTheme() {
+    this.document.body.classList.replace(this.theme, this.theme === 'light-theme' ? (this.theme = 'dark-theme'): (this.theme = 'light-theme'))
+  }
+
+  initializeTheme = () : void => 
+  this.renderer.addClass(this.document.body, this.theme);
 }
+
+export type Theme = 'light-theme' | 'dark-theme';
