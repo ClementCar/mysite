@@ -3,6 +3,9 @@
 .bloc{
     width: 90%;
     margin: 0 auto;
+    // border: 2px solid black;
+    background-color: var(--bg-box);
+    box-shadow: var(--shadow-box);
     &__line{
         display: flex;
         &__space{
@@ -21,6 +24,7 @@
         }
         &__text{
             flex-wrap: wrap;
+            color: var(--text);
         }
     }
 }

@@ -1,5 +1,8 @@
 header{
     text-align: center;
+    & h1 {
+        color: var(--text);
+    }
     & ul{
         display: flex;
         justify-content: space-around;

@@ -1,10 +1,15 @@
 .bloc{
     width: 90%;
     margin: 0 auto;
+    background-color: var(--bg-box);
+    box-shadow: var(--shadow-box);
     &__line{
         display: flex;
         &__space{
             width: 2ch;
+        }
+        &__class{
+            color: var(--class);
         }
         &__number{
             width: 3ch;

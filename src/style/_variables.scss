@@ -9,20 +9,29 @@
 
 .light-theme {
     --sass-text: red;
+    --class: #62260a;
     --number: #8b9a9f;
     --sign: #4c768f;
     --tag: #62260a;
     --letter: black;
     --info: #2276cc;
     --background: #fdfef6;
+    --text: black;
+    --bg-box: #ffffff;
+    --shadow-box:5px 5px 28px #e6e6e6,
+                -5px -5px 28px #ffffff;
 }
 
 .dark-theme {
-    --sass-text: red;
+    --sass-text: #3c3cff;
+    --class: #b37e0c;
     --number: #8b9a9f;
-    --sign: yellow;
-    --tag: #62260a;
+    --sign: gray;
+    --tag: blue;
     --letter: black;
-    --info: #2276cc;
+    --info: #c43409;
     --background: black;
+    --text: white;
+    --bg-box: #1a1a1a;
+    --shadow-box:0;
 }
