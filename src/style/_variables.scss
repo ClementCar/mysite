@@ -7,6 +7,13 @@
 //     --light-info: #2276cc;
 // }
 
+:root{
+    --breakpoint: (
+        desktop: 993px,
+        max-desktop: 1600px
+    )
+}
+
 .light-theme {
     --sass-text: red;
     --class: #62260a;

@@ -1,0 +1,12 @@
+:root{
+    // @mixin media-desktop {
+    //     @media screen and (min-width: map-get(var(--breakpoint), desktop)){
+    //         @content;
+    //     }
+    // }
+    @mixin --media-desktop {
+        @media screen and (min-width: 993px){
+            @content;
+        }
+    }
+}
