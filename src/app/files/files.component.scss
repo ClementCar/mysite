@@ -1,20 +1,21 @@
+@import'/src/style/mixin';
+
 .section{
     justify-content: center;
+    margin: 0 auto;
+    margin-top: 10%;
 
-    @media screen and (min-width: 993px){
+    @include media-desktop{
         display: flex;
-        width: 100%;
-        padding: 0;
+        width: 90%;
     }
-    // @include var(--media-desktop){
-    //     display: flex;
-    // }
     &__file{
         width: 80%;
         margin: 0 auto;
+        background-color: var(--bg-file);
 
         //media
-        @media screen and (min-width: 993px){
+        @include media-desktop{
             width: 20%;
             margin: 0;
         }
@@ -23,9 +24,8 @@
         }
     }
     &__code{
-
-        @media screen and (min-width: 993px){
-            width: 0%;
+        @include media-desktop{
+            width: 80%;
         }
     }
     & a {
