@@ -13,12 +13,37 @@ header{
             list-style: none;
             background-color: yellow;
             padding: 5px;
+            animation: header-active-return 0.5s both;
         }
     }
+}
+
+@keyframes header-active {
+    0%{
+        border-radius: 0;
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+        border-radius: 30px;
+    }
+    
+}
+
+@keyframes header-active-return {
+    0%{
+        border-radius: 30px;
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+        border-radius: 0;
+    }
+    
 }
 
 
 // améliorer
 .active-link{
-    transform: scale(1.5);
+    animation: header-active 0.5s both;
 }
