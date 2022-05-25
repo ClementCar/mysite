@@ -28,6 +28,7 @@
     --bg-box: #ffffff;
     --shadow-box:5px 5px 28px #e6e6e6,
                 -5px -5px 28px #ffffff;
+    --img: url(../assets/dots.png);
 }
 
 .dark-theme {
@@ -43,4 +44,5 @@
     --bg-file: #252526;
     --bg-box: #1e1e1e;
     --shadow-box:0;
+    --img:url(../assets/black-dots.png) ;
 }

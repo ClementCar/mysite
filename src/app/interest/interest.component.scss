@@ -1,0 +1,32 @@
+.bloc{
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--bg-box);
+    box-shadow: var(--shadow-box);
+    &__line{
+        display: flex;
+        &__space{
+            width: 2ch;
+        }
+        &__class{
+            color: var(--class);
+        }
+        &__number{
+            width: 3ch;
+            text-align: right;
+            min-width: 3ch;
+        }
+        &__sign{
+            color: var(--sign);
+        }
+        &__tag{
+            color: var(--tag);
+        }
+        &__text{
+            color: var(--sass-text);
+        }
+        &__info{
+            color: var(--info);
+        }
+    }
+}

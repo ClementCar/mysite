@@ -14,7 +14,9 @@
         margin: 0 auto;
         background-color: var(--bg-file);
         box-shadow: var(--shadow-box);
-        padding-top: 5%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        
 
         //media
         @include media-desktop{
@@ -45,6 +47,13 @@
         color: var(--text);
         display: flex;
         align-items: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    & ul {
+        padding: 0;
+        margin: 0;
+        padding-left: 10%;
     }
     & img {
         width: 17px;

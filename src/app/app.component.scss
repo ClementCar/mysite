@@ -11,3 +11,24 @@
         transition: all 0.3s ease-in-out;
     }
 }
+
+.dots-top{
+    position: fixed;
+    top: 10%;
+    right: 0%;
+}
+
+.dots-bot{
+    position: fixed;
+    bottom: 10%;
+}
+
+div {
+    width: 20%;
+    height: 30%;
+    background-image: var(--img);
+    background-size: contain;
+    transition: all 0.3s ease-in-out;
+    // height: 25%;
+    z-index: -100;
+}

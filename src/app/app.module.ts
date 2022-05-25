@@ -10,6 +10,7 @@ import { CvComponent } from './cv/cv.component';
 import { SkillComponent } from './skill/skill.component';
 import { FilesComponent } from './files/files.component';
 import { AppRoutingModule } from './app-routing.module';
+import { InterestComponent } from './interest/interest.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
     ContactComponent,
     CvComponent,
     SkillComponent,
-    FilesComponent
+    FilesComponent,
+    InterestComponent
   ],
   imports: [
     BrowserModule,
