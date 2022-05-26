@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { ContactComponent } from "./contact/contact.component";
 import { CvComponent } from "./cv/cv.component";
 import { FilesComponent } from "./files/files.component";
 import { FolioComponent } from "./folio/folio.component";
@@ -22,8 +21,7 @@ const routes: Routes = [
             path: 'ts', component: InterestComponent
         }
     ]},
-    { path: 'portfolio', component: FolioComponent},
-    { path: 'contact', component: ContactComponent}
+    { path: 'portfolio', component: FolioComponent}
 ]
 
 @NgModule({
