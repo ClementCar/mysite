@@ -8,8 +8,8 @@
         &__space{
             width: 2ch;
         }
-        &__class{
-            color: var(--class);
+        &__imp{
+            color: var(--ts-imp);
         }
         &__number{
             width: 3ch;
@@ -19,14 +19,17 @@
         &__sign{
             color: var(--sign);
         }
-        &__tag{
-            color: var(--tag);
+        &__mod{
+            color: var(--ts-mod);
         }
         &__text{
-            color: var(--sass-text);
+            color: var(--ts-text);
         }
-        &__info{
-            color: var(--info);
+        &__comp{
+            color: var(--ts-comp);
+        }
+        &__quote{
+            color: var(--ts-quote);
         }
     }
 }

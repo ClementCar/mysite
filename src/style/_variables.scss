@@ -29,6 +29,11 @@
     --shadow-box:5px 5px 28px #e6e6e6,
                 -5px -5px 28px #ffffff;
     --img: url(../assets/dots.png);
+    --ts-imp: #6e3e7a;
+    --ts-text: #1e38a1;
+    --ts-mod:#1e88da;
+    --ts-comp: #439544;
+    --ts-quote: #9b351e;
 }
 
 .dark-theme {
@@ -45,4 +50,9 @@
     --bg-box: #1e1e1e;
     --shadow-box:0;
     --img:url(../assets/black-dots.png) ;
+    --ts-imp: #6e3e7a;
+    --ts-text: #1e38a1;
+    --ts-mod:#1e88da;
+    --ts-comp: #439544;
+    --ts-quote: #9b351e;
 }
