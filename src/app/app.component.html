@@ -1,9 +1,18 @@
-<a (click)="switchTheme()" class="mode" title="Changer de thème">
+<!-- <a (click)="switchTheme()" class="mode" title="Changer de thème">
   <i class="fas fa-sun"></i>
   <i class="fas fa-moon"></i>
+</a> -->
+<a class="theme" (click)="switchTheme()" title="Changer de thème">
+  <div class="theme__bloc">
+    <div class="theme__bloc__content">
+        <div class="theme__bloc__content__sun">
+            <div class="theme__bloc__content__sun__shadow"></div>
+        </div>
+    </div>
+  </div>
 </a>
-<div class="dots-top"></div>
-<div class="dots-bot"></div>
+<div class="dots-top dots"></div>
+<div class="dots-bot dots"></div>
 <app-header></app-header>
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<!-- <app-footer></app-footer> -->

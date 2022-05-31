@@ -1,9 +1,8 @@
 .footer{
     background-color: gray;
-    height: 100px;
-    padding-top: 40px;
+    padding: 40px;
     & div {
-        width: 50%;
+        width: 60%;
         display: flex;
         justify-content: space-around;
         margin: 0 auto;
@@ -11,8 +10,9 @@
     & a {
         text-decoration: none;
         color: var(--text);
-        padding: 2px;
+        padding: 5px;
         border: 1px solid var(--text);
-        border-radius: 50%;
+        border-radius: 100%;
+        font-size: 20px;
     }
 }

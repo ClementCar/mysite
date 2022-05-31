@@ -1,0 +1,11 @@
+.section{
+    width: 100%;
+    &_cart{
+        width: 80%;
+        background-color: white;
+        border-radius: 9px;
+        & img {
+            object-fit: contain;
+        }
+    }
+}

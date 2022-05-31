@@ -1,0 +1,29 @@
+
+// Anim theme 
+
+@keyframes moveShadow {
+    0%{
+        transform: translateX(20px);
+        background-color: #fdfef6;
+    }
+    50%{
+        transform: translateX(-10px);
+        background-color: black;
+    }
+    100%{
+        transform: translateX(-50px);
+        background-color: #fdfef6;
+    }
+}
+
+@keyframes dayNight {
+    0%{
+        background-color: #fdfef6;
+    }
+    50%{
+        background-color: black;
+    }
+    100%{
+        background-color: #fdfef6;
+    }
+}
