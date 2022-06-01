@@ -1,11 +1,20 @@
 .section{
     width: 100%;
-    &_cart{
+    justify-content: center;
+    &__cart{
         width: 80%;
         background-color: white;
+        margin: 0 auto;
+        margin-top: 30px;
+        height: 500px;
         border-radius: 9px;
-        & img {
-            object-fit: contain;
+        overflow: hidden;
+        padding: 5px;
+        box-shadow: var(--shadow-box);
+        & video {
+            width: 90%;
+            height: 80%;
+            justify-content: center;
         }
     }
 }
