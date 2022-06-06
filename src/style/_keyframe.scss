@@ -27,3 +27,23 @@
         background-color: #fdfef6;
     }
 }
+
+// hover img 
+
+@keyframes img {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+@keyframes not-img {
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
