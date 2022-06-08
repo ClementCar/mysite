@@ -10,9 +10,27 @@
 .section{
     width: 100%;
     justify-content: center;
+    position: relative;
+    padding-top: 50px;
     @include media-desktop {
         display: flex;
         flex-wrap: wrap;
+    }
+    &__link{
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        padding: 5px;
+        transform: translate(-50%);
+        background-color: var(--bg-file);
+        text-decoration: none;
+        box-shadow: var(--shadow-box);
+        border: 1px solid yellow;
+        border-radius: 9px;
+        color: var(--text);
+        & i {
+            margin-left: 5px;
+        }
     }
     &__card{
         width: 80%;

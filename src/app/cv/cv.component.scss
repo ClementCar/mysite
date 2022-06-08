@@ -3,7 +3,8 @@
 .bloc{
     width: 100%;
     margin: 0 auto;
-    // border: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: var(--bg-box);
     box-shadow: var(--shadow-box);
     &__line{

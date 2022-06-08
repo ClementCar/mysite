@@ -3,6 +3,8 @@
     margin: 0 auto;
     background-color: var(--bg-box);
     box-shadow: var(--shadow-box);
+    padding-top: 20px;
+    padding-bottom: 20px;
     &__line{
         display: flex;
         &__space{

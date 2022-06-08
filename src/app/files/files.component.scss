@@ -5,6 +5,8 @@
     margin: 0 auto;
     margin-top: 10%;
     width: 90%;
+    position: relative;
+    padding-bottom: 100px;
 
     @include media-desktop{
         display: flex;
@@ -58,6 +60,22 @@
     & img {
         width: 17px;
         margin-right: 5px;
+    }
+    &__dld{
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        padding: 5px;
+        transform: translate(-50%);
+        background-color: var(--bg-file);
+        text-decoration: none;
+        box-shadow: var(--shadow-box);
+        border: 1px solid yellow;
+        border-radius: 9px;
+        color: var(--text);
+        & i {
+            margin-left: 5px;
+        }
     }
 }
 
