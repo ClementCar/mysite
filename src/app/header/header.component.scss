@@ -3,6 +3,12 @@ header{
     & h1 {
         color: var(--text);
     }
+    & div {
+        background-image: var(--logo);
+        width: 40%;
+        height: 400px;
+        margin: 0 auto;
+    }
     & ul{
         display: flex;
         justify-content: space-around;

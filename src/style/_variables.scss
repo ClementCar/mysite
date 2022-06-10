@@ -15,6 +15,7 @@
 }
 
 .light-theme {
+    --logo: url(../assets/logo.JPG);
     --sass-text: red;
     --class: #62260a;
     --number: #8b9a9f;
@@ -37,6 +38,7 @@
 }
 
 .dark-theme {
+    --logo:url(../assets/logo-black.JPG);
     --sass-text: #3c3cff;
     --class: #b37e0c;
     --number: #8b9a9f;
