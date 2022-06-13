@@ -1,13 +1,29 @@
-<header>
+<header class="header">
     <!-- <h1>c/></h1> -->
     <!-- <img src="../../assets/logo.JPG" alt=""> -->
-    <div>
+    <div class="header__logo">
     </div>
-    <nav>
-        <ul>
-            <li routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Accueil</li>
-            <li routerLink="/cv" routerLinkActive="active-link">cv</li>
-            <li routerLink="/portfolio" routerLinkActive="active-link">portfolio</li>
+    <nav class="header__nav">
+        <ul class="header__nav__bloc">
+            <li class="header__nav__bloc__link" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+                <div class="header__nav__bloc__link__icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <p class="header__nav__bloc__link__text">Accueil</p>
+            </li>
+            <li class="header__nav__bloc__link" routerLink="/cv/html" routerLinkActive="active-link">
+                <div class="header__nav__bloc__link__icon">
+                    <i class="fas fa-folder-open"></i>
+                </div>
+                <p class="header__nav__bloc__link__text">Cv</p>
+            </li>
+            <li class="header__nav__bloc__link" routerLink="/portfolio" routerLinkActive="active-link">
+                <div class="header__nav__bloc__link__icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <p class="header__nav__bloc__link__text">Portfolio</p>
+            </li>
+            <!-- <div class="header__nav__bloc__active"></div> -->
         </ul>
     </nav>
 </header>

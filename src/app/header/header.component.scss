@@ -1,55 +1,154 @@
-header{
+@import '../../style/mixin';
+
+.header{
     text-align: center;
     & h1 {
         color: var(--text);
     }
-    & div {
+    &__logo{
         background-image: var(--logo);
         width: 40%;
-        height: 400px;
+        height: 100px;
         margin: 0 auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: all 0.3s ease-in-out;
+        @include media-desktop {
+            width: 20%;
+            height: 150px;
+        }
     }
-    & ul{
+    &__nav{
         display: flex;
-        justify-content: space-around;
-        padding: 0;
-        & li {
-            cursor: pointer;
-            width: 10%;
-            list-style: none;
-            background-color: yellow;
-            padding: 5px;
-            animation: header-active-return 0.5s both;
+        justify-content: center;
+        &__bloc{
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            background-color: yellow ;
+            border-radius: 10px;
+            width: 90%;
+            height: 60px;
+            position: relative;
+            z-index: 0;
+            &__link{
+                cursor: pointer;
+                margin-top: 10px;
+                width: 20%;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                z-index: 1;
+                padding: 5px;
+                transition: all 0.5s ease-in-out;
+
+                &__icon{
+                    font-size: 20px;
+                    padding: 0;
+                    width: 20px;
+                    height: 20px;
+                    margin: 0 auto;
+                    position: relative;
+                }
+                &__text{
+                    margin: 0;
+                    transform: translateY(30px);
+                    visibility: hidden;
+                }
+            }
         }
     }
 }
 
 @keyframes header-active {
     0%{
-        border-radius: 0;
-        transform: scale(1);
+        transform: translateY(0);
+        padding: 0;
     }
     100%{
-        transform: scale(1.5);
-        border-radius: 30px;
+        border-radius: 50%;
+        transform: translateY(-20px);
+        background: yellow;
+        padding: 15px;
+        border: 8px solid var(--background);
     }
     
 }
 
 @keyframes header-active-return {
     0%{
-        border-radius: 30px;
-        transform: scale(1.5);
+        transform: translateY(30px);
+        visibility: hidden;
+    }
+    60%{
+        visibility: hidden;
     }
     100%{
-        transform: scale(1);
-        border-radius: 0;
+        transform: translateY(-20px);
+        visibility: visible;
     }
     
 }
 
+@keyframes radius {
+    0%{
+        visibility: hidden;
+    }
+    60%{
+        visibility: hidden;
+    }
+    to{
+        visibility: visible;
+    }
+}
+
 
 // améliorer
-.active-link{
+// .active-link{
+//     &:nth-child(1){
+//         animation: header-active 0.5s both;
+//     }
+//     &:nth-child(2){
+//         background-color: red;
+//     }
+// }
+.active-link > div{
     animation: header-active 0.5s both;
+    transition: all 0.5s ease-in-out;
+}
+.active-link > div::before {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: -26px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 var(--background);
+    visibility: hidden;
+    animation: radius 0.5s both;
+}
+
+.active-link > div::after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    right: -25px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 var(--background);
+    visibility: hidden;
+    animation: radius 0.5s both;
+}
+.active-link > p {
+    animation: header-active-return 0.5s both ;
+}
+
+.active-link{
+    transition: all 0.5s ease-in-out;
 }
