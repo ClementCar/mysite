@@ -1,4 +1,5 @@
 @import '../../style/mixin';
+@import'../../style/keyframe';
 
 .header{
     text-align: center;
@@ -62,60 +63,8 @@
     }
 }
 
-@keyframes header-active {
-    0%{
-        transform: translateY(0);
-        padding: 0;
-    }
-    100%{
-        border-radius: 50%;
-        transform: translateY(-20px);
-        background: yellow;
-        padding: 15px;
-        border: 8px solid var(--background);
-    }
-    
-}
-
-@keyframes header-active-return {
-    0%{
-        transform: translateY(30px);
-        visibility: hidden;
-    }
-    60%{
-        visibility: hidden;
-    }
-    100%{
-        transform: translateY(-20px);
-        visibility: visible;
-    }
-    
-}
-
-@keyframes radius {
-    0%{
-        visibility: hidden;
-    }
-    60%{
-        visibility: hidden;
-    }
-    to{
-        visibility: visible;
-    }
-}
-
-
-// améliorer
-// .active-link{
-//     &:nth-child(1){
-//         animation: header-active 0.5s both;
-//     }
-//     &:nth-child(2){
-//         background-color: red;
-//     }
-// }
 .active-link > div{
-    animation: header-active 0.5s both;
+    animation: header-icon 0.5s both;
     transition: all 0.5s ease-in-out;
 }
 .active-link > div::before {
@@ -146,7 +95,7 @@
     animation: radius 0.5s both;
 }
 .active-link > p {
-    animation: header-active-return 0.5s both ;
+    animation: header-text 0.5s both ;
 }
 
 .active-link{

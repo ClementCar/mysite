@@ -1,5 +1,6 @@
-
-// Anim theme 
+// ================================================================
+// Anim theme
+// ================================================================
 
 @keyframes moveShadow {
     0%{
@@ -28,7 +29,9 @@
     }
 }
 
-// hover img 
+// ================================================================
+// hover img
+// ================================================================
 
 @keyframes img {
     0%{
@@ -45,5 +48,62 @@
     }
     100%{
         transform: scale(1);
+    }
+}
+
+// ================================================================
+// Footer anim
+// ================================================================
+
+@keyframes shake {
+    10%{transform: rotate(-15deg);}
+    20%{transform: rotate(15deg);}
+    30%{transform: rotate(-15deg);}
+    40%{transform: rotate(15deg);}
+}
+
+// ================================================================
+// Header anim
+// ================================================================
+
+@keyframes header-icon {
+    0%{
+        transform: translateY(0);
+        padding: 0;
+    }
+    100%{
+        border-radius: 50%;
+        transform: translateY(-20px);
+        background: yellow;
+        padding: 15px;
+        border: 8px solid var(--background);
+    }
+    
+}
+
+@keyframes header-text {
+    0%{
+        transform: translateY(30px);
+        visibility: hidden;
+    }
+    60%{
+        visibility: hidden;
+    }
+    100%{
+        transform: translateY(-20px);
+        visibility: visible;
+    }
+    
+}
+
+@keyframes radius {
+    0%{
+        visibility: hidden;
+    }
+    60%{
+        visibility: hidden;
+    }
+    to{
+        visibility: visible;
     }
 }
