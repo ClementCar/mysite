@@ -1,1 +1,92 @@
+.section{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	&__bloc{
+		width: 60%;
+		display: flex;
+		justify-content: center;
+		&__first{
+			position: relative;
+			&__letter{
+				position: relative;
+				font-size: 100px;
+				margin: 0;
+				font-family: 'Homemade Apple', cursive;
+				color: red;
+				z-index: 10;
+				animation: letter 1s both;
+			}
+			&__slash{
+				position: absolute;
+				top: 35px;
+				left: 60px;
+				width: 10px;
+				height: 100px;
+				background-color: black;
+				transform: rotate(32deg);
+				z-index: 0;
+				animation: slash 1s both;
+			}
+			&__name{
+				position: absolute;
+				top: 70px;
+				left: 50px;
+			}
+		}
+		&__last{
+			&__sign{
+				font-family: 'Playball', cursif;
+				font-size: 100px;
+				margin: 0;
+				margin-top: 25px;
+				animation: sign 2s both;
+			}
+		}
+	}
+}
+// font-family: 'Comforter Brush', cursive;
+    // font-family: 'Homemade Apple', cursive;
+	// font-family: 'Lobster', cursif;
 
+@keyframes letter {
+	from{
+		transform: scale(1);
+	}
+	to{
+		transform: scale(0.5) translateX(-70px);
+	}
+}
+
+@keyframes slash {
+	from{
+		transform: rotate(32deg);
+		width: 10px;
+		height: 100px;
+	}
+	to{
+		transform: rotate(0)  translateY(30px) translateX(-25px);
+		width: 8px;
+		height: 60px;
+	}
+}
+
+
+// a faire en une fois
+@keyframes sign {
+	40%{
+		transform: translateX(-40px);
+	}
+	80%{
+		transform: translateX(10px);
+	}
+}
+
+@keyframes sign-2 {
+	from{
+		transform: scale(1);
+	}
+	to{
+		transform: scale(1.2);
+	}
+}
