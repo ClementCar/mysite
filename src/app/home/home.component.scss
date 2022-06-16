@@ -1,6 +1,8 @@
 .section{
 	width: 100%;
 	display: flex;
+	flex-wrap: wrap;
+	// flex-direction: column;
 	justify-content: center;
 	&__bloc{
 		width: 60%;
@@ -12,10 +14,12 @@
 				position: relative;
 				font-size: 100px;
 				margin: 0;
-				font-family: 'Homemade Apple', cursive;
+				margin-top: 32px;
+				font-family: 'Stoke', serif;
 				color: red;
+				transform: rotate(-25deg);
 				z-index: 10;
-				animation: letter 1s both;
+				animation: letter 1s both 2s;
 			}
 			&__slash{
 				position: absolute;
@@ -26,23 +30,85 @@
 				background-color: black;
 				transform: rotate(32deg);
 				z-index: 0;
-				animation: slash 1s both;
+				animation: slash 1s both 2s;
 			}
 			&__name{
+				margin: 0;
 				position: absolute;
-				top: 70px;
-				left: 50px;
+				top: 65px;
+				left: 40px;
+				font-family:'Playball', cursif ;
+				font-size: 50px;
+				&__all{
+					font-family:'Playball', cursif;
+					opacity: 0;
+					animation: name 1s both;
+				}
+				&__1{
+					animation-delay: 2.4s;
+				}
+				&__2{
+					animation-delay: 2.5s;
+				}
+				&__3{
+					animation-delay: 2.6s;
+				}
+				&__4{
+					animation-delay: 2.7s;
+				}
+				&__5{
+					animation-delay: 2.8s;
+				}
 			}
 		}
 		&__last{
+			position: relative;
 			&__sign{
 				font-family: 'Playball', cursif;
 				font-size: 100px;
 				margin: 0;
 				margin-top: 25px;
-				animation: sign 2s both;
+				animation: sign 4s both 2s;
+			}
+			&__surname{
+				margin: 0;
+				position: absolute;
+				bottom: -20px;
+				left: -70px;
+				font-family:'Playball', cursif ;
+				font-size: 50px;
+				&__all{
+					font-family:'Playball', cursif;
+					opacity: 0;
+					animation: name 1s both;
+				}
+				&__1{
+					animation-delay: 4.2s;
+				}
+				&__2{
+					animation-delay: 4.3s;
+				}
+				&__3{
+					animation-delay: 4.4s;
+				}
+				&__4{
+					animation-delay: 4.5s;
+				}
+				&__5{
+					animation-delay: 4.6s;
+				}
+				&__6{
+					animation-delay: 4.7s;
+				}
+				&__7{
+					animation-delay: 4.8s;
+				}
 			}
 		}
+	}
+	&__presentation{
+		width: 80%;
+		text-align: center;
 	}
 }
 // font-family: 'Comforter Brush', cursive;
@@ -52,6 +118,7 @@
 @keyframes letter {
 	from{
 		transform: scale(1);
+		transform: rotate(-25deg);
 	}
 	to{
 		transform: scale(0.5) translateX(-70px);
@@ -65,28 +132,43 @@
 		height: 100px;
 	}
 	to{
-		transform: rotate(0)  translateY(30px) translateX(-25px);
+		transform: rotate(0)  translateY(30px) translateX(-30px);
 		width: 8px;
-		height: 60px;
+		height: 50px;
 	}
 }
 
 
 // a faire en une fois
 @keyframes sign {
-	40%{
+	10%{
 		transform: translateX(-40px);
 	}
-	80%{
-		transform: translateX(10px);
+	// 20%{
+
+	// }
+	// 30%{
+
+	// }
+	40%{
+		transform: translateX(50px);
+	}
+	50%{
+		transform: translateX(50px) translateY(60px);
+	}
+	// 80%{
+	// 	transform: translateX(-60px);
+	// }
+	100%{
+		transform: translateX(-100px) translateY(60px) rotateY(180deg);
 	}
 }
 
-@keyframes sign-2 {
+@keyframes name {
 	from{
-		transform: scale(1);
+		opacity: 0;
 	}
 	to{
-		transform: scale(1.2);
+		opacity: 1;
 	}
 }
