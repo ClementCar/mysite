@@ -4,6 +4,8 @@
 	flex-wrap: wrap;
 	// flex-direction: column;
 	justify-content: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	&__bloc{
 		width: 60%;
 		display: flex;
@@ -16,7 +18,8 @@
 				margin: 0;
 				margin-top: 32px;
 				font-family: 'Stoke', serif;
-				color: red;
+				color: yellow;
+				text-shadow: 1px 1px 2px black;
 				transform: rotate(-25deg);
 				z-index: 10;
 				animation: letter 1s both 2s;
@@ -27,7 +30,7 @@
 				left: 60px;
 				width: 10px;
 				height: 100px;
-				background-color: black;
+				background-color: var(--text);
 				transform: rotate(32deg);
 				z-index: 0;
 				animation: slash 1s both 2s;
@@ -43,6 +46,7 @@
 					font-family:'Playball', cursif;
 					opacity: 0;
 					animation: name 1s both;
+					color: var(--text);
 				}
 				&__1{
 					animation-delay: 2.4s;
@@ -68,6 +72,7 @@
 				font-size: 100px;
 				margin: 0;
 				margin-top: 25px;
+				color: var(--text);
 				animation: sign 4s both 2s;
 			}
 			&__surname{
@@ -81,6 +86,7 @@
 					font-family:'Playball', cursif;
 					opacity: 0;
 					animation: name 1s both;
+					color: var(--text);
 				}
 				&__1{
 					animation-delay: 4.2s;
@@ -109,6 +115,9 @@
 	&__presentation{
 		width: 80%;
 		text-align: center;
+		font-size: 20px;
+		color: var(--text);
+		margin-top: 100px;
 	}
 }
 // font-family: 'Comforter Brush', cursive;
