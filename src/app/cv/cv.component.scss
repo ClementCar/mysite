@@ -9,6 +9,9 @@
     box-shadow: var(--shadow-box);
     &__line{
         display: flex;
+        & span {
+            font-family: Arial, Helvetica, sans-serif;
+        }
         &__space{
             width: 2ch;
         }

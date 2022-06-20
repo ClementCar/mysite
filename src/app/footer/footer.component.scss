@@ -1,6 +1,9 @@
 @import'../../style/keyframe';
 
 .footer{
+    position: absolute;
+    bottom: -135px;
+    width: 100%;
     background-color: var(--footer-bg);
     padding-top: 40px;
     display: flex;

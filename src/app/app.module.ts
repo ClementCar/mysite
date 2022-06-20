@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import * as fr from '@angular/common/locales/fr';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -11,6 +12,8 @@ import { FilesComponent } from './files/files.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InterestComponent } from './interest/interest.component';
 import { FooterComponent } from './footer/footer.component';
+import { registerLocaleData } from '@angular/common';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +25,20 @@ import { FooterComponent } from './footer/footer.component';
     SkillComponent,
     FilesComponent,
     InterestComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useValue: 'fr-FR'}
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    registerLocaleData(fr.default)
+  }
+}

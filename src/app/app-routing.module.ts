@@ -5,6 +5,7 @@ import { FilesComponent } from "./files/files.component";
 import { FolioComponent } from "./folio/folio.component";
 import { HomeComponent } from "./home/home.component";
 import { InterestComponent } from "./interest/interest.component";
+import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { SkillComponent } from "./skill/skill.component";
 
 
@@ -21,7 +22,9 @@ const routes: Routes = [
             path: 'ts', component: InterestComponent
         }
     ]},
-    { path: 'portfolio', component: FolioComponent}
+    { path: 'portfolio', component: FolioComponent},
+    { path: '**', pathMatch: 'full',
+        component: PageNotFoundComponent}
 ]
 
 @NgModule({
