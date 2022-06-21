@@ -37,7 +37,6 @@
     &__card{
         width: 80%;
         background-color: var(--bg-file);
-        // background-color: #e3f6f5;
         margin: 0 auto;
         margin-top: 30px;
         height: 500px;
@@ -69,7 +68,6 @@
                 visibility: hidden;
                 position: relative;
                 @include media-desktop{
-                    // display: flex;
                     visibility: visible;
                     width: 60%;
                     & img {
