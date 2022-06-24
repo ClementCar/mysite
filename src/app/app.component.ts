@@ -27,6 +27,13 @@ export class AppComponent implements OnInit{
 
   initializeTheme = () : void => 
   this.renderer.addClass(this.document.body, this.theme);
+
+  // initializeTheme = () : void => {
+  //   if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+  //     this.renderer.addClass(this.document, this.theme);
+  //   } 
+  // }
+
 }
 
 export type Theme = 'light-theme' | 'dark-theme';
