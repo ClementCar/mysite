@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit{
   title = 'mysite';
-  theme: Theme = 'light-theme';
+  theme: Theme = 'dark-theme';
 
   constructor(
     private router: Router,

@@ -13,6 +13,9 @@ const routes: Routes = [
     { path: '', component: HomeComponent},
     { path: 'cv', component: FilesComponent, children: [
         {
+            path: '', redirectTo: '/cv/html', pathMatch: 'full'
+        },
+        {
             path: 'html', component: CvComponent
         },
         {

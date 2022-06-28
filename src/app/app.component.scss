@@ -1,4 +1,5 @@
 @import 'src/style/keyframe';
+@import'/src/style/mixin';
 
 .theme{
     position: absolute;
@@ -48,6 +49,7 @@
 
 .dots-bot{
     position: fixed;
+    left: 0;
     bottom: 10%;
 }
 
@@ -58,4 +60,7 @@
     background-size: contain;
     transition: all 0.3s ease-in-out;
     z-index: -100;
+    @include media-desktop {
+        width: 10%;
+    }
 }
