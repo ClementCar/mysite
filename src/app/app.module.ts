@@ -1,5 +1,6 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-Browser/animations';
 import * as fr from '@angular/common/locales/fr';
 
 import { AppComponent } from './app.component';
@@ -11,7 +12,6 @@ import { SkillComponent } from './skill/skill.component';
 import { FilesComponent } from './files/files.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InterestComponent } from './interest/interest.component';
-import { FooterComponent } from './footer/footer.component';
 import { registerLocaleData } from '@angular/common';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
@@ -25,11 +25,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SkillComponent,
     FilesComponent,
     InterestComponent,
-    FooterComponent,
     PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
   providers: [

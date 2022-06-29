@@ -10,7 +10,7 @@ import { SkillComponent } from "./skill/skill.component";
 
 
 const routes: Routes = [
-    { path: '', component: HomeComponent},
+    { path: '', component: HomeComponent, data: {Animation: 'OpenClosePage'}},
     { path: 'cv', component: FilesComponent, children: [
         {
             path: '', redirectTo: '/cv/html', pathMatch: 'full'

@@ -1,3 +1,4 @@
+@import'../../style/mixin';
 @import'../../style/keyframe';
 
 .section{
@@ -119,5 +120,44 @@
 		font-size: 20px;
 		color: var(--text);
 		margin-top: 100px;
+	}
+	&__social{
+		width: 50%;
+		display: flex;
+		justify-content: space-between;
+        margin: 0 auto;
+		margin-top: 40px;
+		@include media-desktop {
+			width: 25%;
+		}
+        & a {
+            text-decoration: none;
+            color: var(--text);
+            width: 35px;
+            height: 35px;
+            border: 1px solid var(--text);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & i {
+                font-size: 20px;
+            }
+            &:hover{
+                animation: shake .25s;
+            }
+        }
+        &__phone:hover{
+            background-color:#238c0b;
+        }
+        &__email:hover{
+            background-color: #7a107e;
+        }
+        &__github:hover{
+            background-color: #2ea44f;
+        }
+        &__linkedin:hover{
+            background-color: #0077b5;
+        }
 	}
 }

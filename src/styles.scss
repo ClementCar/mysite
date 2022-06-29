@@ -3,14 +3,14 @@
 @import '/src/style/variables';
 @import'/src/style/mixin';
 
-html{
-    height: 100%;
-}
+// html{
+//     // height: 100%;
+// }
 
 body{
     padding: 0;
     position: relative;
-    min-height: 100%;
+    // min-height: 100%;
     background-color: var(--background);
     transition: all 0.3s ease-in-out;
     position: relative;
@@ -22,7 +22,10 @@ body{
 }
 
 * {
-    font-family: 'Buda', cursive;
+    // font-family: 'Buda', cursive;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    // font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    // font-family:'Playball', cursif ;
     // font-family: Arial, Helvetica, sans-serif;
     // font-family: 'Courier New', Courier, monospace;
     // font-weight: 500;
