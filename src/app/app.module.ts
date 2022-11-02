@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-Browser/animations';
 import * as fr from '@angular/common/locales/fr';
 
+import 'hammerjs';
+
+// import { FlexLayoutModule } from '@angular/flex-layout';
+// import { MatListModule } from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
