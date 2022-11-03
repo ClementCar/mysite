@@ -5,8 +5,12 @@ import * as fr from '@angular/common/locales/fr';
 
 import 'hammerjs';
 
-// import { FlexLayoutModule } from '@angular/flex-layout';
-// import { MatListModule } from '@angular/material/list';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule} from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -35,7 +39,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'fr-FR'}

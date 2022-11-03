@@ -3,6 +3,7 @@ import { Project } from '../shared/project';
 import { PROJECTS } from '../shared/porjects';
 import { of, Observable } from 'rxjs';
 import { map, catchError } from 'rxjs';
+import { resolve } from 'dns';
 
 @Injectable({
   providedIn: 'root'
@@ -11,15 +12,15 @@ export class ProjectService {
 
   constructor() { }
 
-  getAllProjects(): Observable<Project[]>{
-    return of(PROJECTS);
+  getAllProjects(): Promise<Project[]>{
+    return new Promise( resolve => PROJECTS) ;
   }
 
-  getProject(id: string): Observable<Project> {
-    return of(PROJECTS.filter((project) => (project.id === id))[0]);
+  getProject(id: string): Promise<Project> {
+    return new Promise( resolve => (PROJECTS.filter((project) => (project.id === id))[0]));
   }
 
-  getProjectIds(): Observable<string[] | any > {
-    return of(PROJECTS.map(project => project.id));
+  getProjectIds(): Promise<string[] | any > {
+    return new Promise( resolve => PROJECTS.map(project => project.id));
   }
 }
