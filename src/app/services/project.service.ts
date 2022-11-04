@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Project } from '../shared/project';
-import { PROJECTS } from '../shared/porjects';
+import { PROJECTS } from '../shared/projects';
 import { of, Observable } from 'rxjs';
 import { map, catchError } from 'rxjs';
 import { resolve } from 'dns';
@@ -12,15 +12,15 @@ export class ProjectService {
 
   constructor() { }
 
-  getAllProjects(): Promise<Project[]>{
-    return new Promise( resolve => PROJECTS) ;
+  getAllProjects(): Observable<Project[]>{
+    return of(PROJECTS) ;
   }
 
-  getProject(id: string): Promise<Project> {
-    return new Promise( resolve => (PROJECTS.filter((project) => (project.id === id))[0]));
+  getProject(id: string): Observable<Project> {
+    return of(PROJECTS.filter((project) => (project.id === id))[0]);
   }
 
-  getProjectIds(): Promise<string[] | any > {
-    return new Promise( resolve => PROJECTS.map(project => project.id));
+  getProjectIds(): Observable<string[] | any>  {
+    return of(PROJECTS.map(project => project.id));
   }
 }

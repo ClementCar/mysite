@@ -96,15 +96,16 @@
     
 </section>
 <section>
-    <!-- <div *ngFor="let project of projects">
+    <div *ngFor="let project of projects">
         <p>{{project.id}}</p>
-    </div> -->
+    </div>
     <div fxFlex *ngIf="projects">
         <mat-grid-list cols="2">
             <mat-grid-tile *ngFor="let project of projects">
-                <img src={{project.image}} alt={{project.name}}>
+                <img src="{{project.image}}" alt="{{project.name}}">
                 <mat-grid-tile-footer>
                     <h2>{{project.name}}</h2>
+                    <h2>{{project.image}}</h2>
                 </mat-grid-tile-footer>
             </mat-grid-tile>
         </mat-grid-list>

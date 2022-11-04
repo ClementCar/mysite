@@ -15,7 +15,7 @@ export class FolioComponent implements OnInit {
 
   ngOnInit(): void {
     this.projectService.getAllProjects()
-    .then((projects) => this.projects = projects)
+    .subscribe((projects) => this.projects = projects)
   }
 
 }
