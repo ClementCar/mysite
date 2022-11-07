@@ -1,4 +1,4 @@
-<section class="section">
+<!-- <section class="section">
     <a class="section__link" href="https://github.com/ClementCar/mysite.git" target="_blank" title="Code de ce site">
         Acceder au code de ce site 
         <i class="fas fa-external-link"></i>
@@ -94,15 +94,15 @@
         </div>
     </div>
     
-</section>
-<section>
-    <div *ngFor="let project of projects">
+</section> -->
+<section class="section">
+    <!-- <div *ngFor="let project of projects">
         <p>{{project.id}}</p>
-    </div>
+    </div> -->
     <div fxFlex *ngIf="projects">
-        <mat-grid-list cols="2">
+        <mat-grid-list cols="2" rowHeight="400px">
             <mat-grid-tile *ngFor="let project of projects">
-                <img src="{{project.image}}" alt="{{project.name}}">
+                <img height="400px" src="{{project.image}}" alt="{{project.name}}">
                 <mat-grid-tile-footer>
                     <h2>{{project.name}}</h2>
                     <h2>{{project.image}}</h2>
