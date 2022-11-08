@@ -23,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { InterestComponent } from './interest/interest.component';
 import { registerLocaleData } from '@angular/common';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FoliodetailsComponent } from './foliodetails/foliodetails.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SkillComponent,
     FilesComponent,
     InterestComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FoliodetailsComponent
   ],
   imports: [
     BrowserModule,

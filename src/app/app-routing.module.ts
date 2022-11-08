@@ -7,6 +7,7 @@ import { HomeComponent } from "./home/home.component";
 import { InterestComponent } from "./interest/interest.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { SkillComponent } from "./skill/skill.component";
+import { FoliodetailsComponent } from "./foliodetails/foliodetails.component";
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
         }
     ]},
     { path: 'portfolio', component: FolioComponent},
+    { path: 'portfolio/:id', component: FoliodetailsComponent},
     { path: '**', pathMatch: 'full',
         component: PageNotFoundComponent}
 ]
