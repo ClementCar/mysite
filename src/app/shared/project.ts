@@ -3,7 +3,7 @@ export class Project {
     name!: string;
     logo!: string;
     image!: string;
-    // image2!: string;
+    image2!: string;
     // image3!: string;
     // image4!: string;
     video!: string;

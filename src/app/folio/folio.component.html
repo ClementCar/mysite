@@ -101,7 +101,7 @@
     </div> -->
     <div fxFlex *ngIf="projects">
         <mat-grid-list cols="2" rowHeight="400px" gutterSize="15px">
-            <mat-grid-tile *ngFor="let project of projects">
+            <mat-grid-tile *ngFor="let project of projects" [routerLink]="['/portfolio', project.id]">
                 <img class="grid-img" src="{{project.logo}}" alt="{{project.name}}">
                 <mat-grid-tile-footer>
                     <h2>{{project.name}}</h2>
