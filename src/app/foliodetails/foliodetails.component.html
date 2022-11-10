@@ -1,5 +1,5 @@
-<section class="section">
-    <mat-card>
+<section class="section" [@visibility]="visibility">
+    <mat-card [@visibility]="visibility" [@expand]>
         <mat-card-header>
             <mat-card-title>
                 <h3>{{project.name}}</h3>
@@ -8,13 +8,14 @@
             </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <mat-grid-list cols="{{breakpoint}}" rowHeight="200px">
-                <mat-grid-tile rowspan="2"><video controls height="80%"><source src="{{project.video}}" type="video/mp4"></video></mat-grid-tile>
+            <mat-grid-list [cols]="breakpoint" rowHeight="200px" (window:resize)="changeSize($event)">
+                <mat-grid-tile rowspan="2"><video class="grid-video" controls src="{{project.video}}"></video></mat-grid-tile>
+                <mat-grid-tile rowspan="{{col}}"><p>{{project.description}}</p></mat-grid-tile>
                 <mat-grid-tile><img class="grid-img" src="{{project.image}}" alt="{{project.name}}"></mat-grid-tile>
                 <mat-grid-tile><img class="grid-img" src="{{project.image2}}" alt="{{project.name}}"></mat-grid-tile>
             </mat-grid-list>
         </mat-card-content>
-        <mat-card-actions>
+        <mat-card-actions width="100%">
             <button mat-button [routerLink]="['/portfolio', prev]">
                 <span class="fa fa-chevron-left fa-lg"></span>
             </button>
@@ -25,3 +26,6 @@
         </mat-card-actions>
     </mat-card>
 </section>
+<!-- <video controls src="{{project.video}}"></video> -->
+<!-- <video controls><source src="{{project.video}}" type="video/mp4"></video> -->
+<!-- colspan="{{col}}" -->

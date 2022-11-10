@@ -5,11 +5,16 @@ import { switchMap } from 'rxjs/operators';
 import { Project } from '../shared/project';
 import { ProjectService } from '../services/project.service';
 import { BreakpointService } from '../services/breakpoint.service';
+import { expand, visibility } from '../animations/app.animation';
 
 @Component({
   selector: 'app-foliodetails',
   templateUrl: './foliodetails.component.html',
-  styleUrls: ['./foliodetails.component.scss']
+  styleUrls: ['./foliodetails.component.scss'],
+  animations: [
+    expand(),
+    visibility()
+  ]
 })
 export class FoliodetailsComponent implements OnInit {
 
@@ -19,6 +24,7 @@ export class FoliodetailsComponent implements OnInit {
   next!: string;
   visibility = 'shown';
   breakpoint!: number;
+  col!: number;
 
   constructor(private projectService: ProjectService,
     private breakpointService: BreakpointService,
@@ -29,7 +35,13 @@ export class FoliodetailsComponent implements OnInit {
     this.projectService.getProjectIds().subscribe(projectIds => this.projectIds = projectIds);
     this.route.params.pipe(switchMap((params: Params) => {this.visibility = 'hidden'; return this.projectService.getProject(params['id']);}))
     .subscribe(project => { this.project = project; this.setPrevNext(project.id); this.visibility= 'shown'});
-    this.breakpoint = this.breakpointService.detailBreakpoint()
+    this.breakpoint = this.breakpointService.detailBreakpoint();
+    this.col = this.breakpointService.detailColspan();
+  }
+
+  changeSize(event: any) {
+    this.breakpoint = this.breakpointService.detailBreakpoint();
+    this.col = this.breakpointService.detailColspan();
   }
 
   setPrevNext(projectId: string) {

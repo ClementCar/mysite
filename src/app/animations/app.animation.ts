@@ -1,0 +1,25 @@
+import { trigger, state, style, animate, transition } from "@angular/animations";
+
+export function expand() {
+    return trigger('expand', [
+        state('*', style({ opacity: 1, transform: 'translateX(0)'})),
+        transition(':enter', [
+            style({ transform: 'translateX(-50%)', opacity: 0}),
+            animate('300ms ease-in', style({ opacity: 1, transform: 'translateX(0)'}))
+        ])
+    ]);
+}
+
+export function visibility() {
+    return trigger('visibility', [
+        state('shown', style({
+            transform: 'scale(1.0)',
+            opacity: 1
+        })),
+        state('hidden', style({
+            transform: 'scale(0.5)',
+            opacity: 0
+        })),
+        transition('* => *', animate('0.6s easi-in-out'))
+    ]);
+}

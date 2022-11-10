@@ -3,9 +3,18 @@
     margin: 0 auto;
 }
 
-.grid-img{
+.grid-img, .grid-video{
     width: auto;
     height: auto;
     max-height: 100%;
     max-width: 100%;
+}
+
+mat-card-header {
+    display: block;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: space-between;
 }
