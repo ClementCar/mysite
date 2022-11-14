@@ -1,5 +1,6 @@
-<section class="section" [@visibility]="visibility">
-    <mat-card [@visibility]="visibility" [@expand]>
+<section class="section" [@visibility]="visibility" [@expand]>
+    <!-- [@visibility]="visibility" -->
+    <mat-card *ngIf="project">
         <mat-card-header>
             <mat-card-title>
                 <h3>{{project.name}}</h3>

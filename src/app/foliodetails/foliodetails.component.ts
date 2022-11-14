@@ -5,19 +5,24 @@ import { switchMap } from 'rxjs/operators';
 import { Project } from '../shared/project';
 import { ProjectService } from '../services/project.service';
 import { BreakpointService } from '../services/breakpoint.service';
-import { expand, visibility } from '../animations/app.animation';
+import { expand, visibility, flyInOut } from '../animations/app.animation';
 
 @Component({
   selector: 'app-foliodetails',
   templateUrl: './foliodetails.component.html',
   styleUrls: ['./foliodetails.component.scss'],
+  // host: {
+  //   '[@flyInOut]': 'true',
+  //   'style': 'display: bock;'
+  // },
   animations: [
     expand(),
-    visibility()
+    visibility(),
+    flyInOut()
   ]
 })
 export class FoliodetailsComponent implements OnInit {
-
+  
   project!: Project;
   projectIds!: string[];
   prev!: string;
@@ -33,8 +38,9 @@ export class FoliodetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.projectService.getProjectIds().subscribe(projectIds => this.projectIds = projectIds);
-    this.route.params.pipe(switchMap((params: Params) => {this.visibility = 'hidden'; return this.projectService.getProject(params['id']);}))
-    .subscribe(project => { this.project = project; this.setPrevNext(project.id); this.visibility= 'shown'});
+    this.route.params.pipe(switchMap((params: Params) => {this.visibility = 'hidden'; console.log(this.visibility); return this.projectService.getProject(params['id']);}))
+    .subscribe(project => { this.project = project; this.setPrevNext(project.id); this.visibility= 'shown'; console.log(this.visibility)});
+    console.log(this.visibility)
     this.breakpoint = this.breakpointService.detailBreakpoint();
     this.col = this.breakpointService.detailColspan();
   }

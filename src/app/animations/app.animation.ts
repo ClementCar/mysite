@@ -20,6 +20,19 @@ export function visibility() {
             transform: 'scale(0.5)',
             opacity: 0
         })),
-        transition('* => *', animate('0.6s easi-in-out'))
+        transition('* => *', animate('0.6s ease-in-out'))
+    ]);
+}
+
+export function flyInOut() {
+    return trigger('flyInOut', [
+        state('*', style({ opacity: 1, transform: 'translateX(0)'})),
+        transition(':enter', [
+            style({ transform: 'translateX(-100%)', opacity: 0}),
+            animate('600ms ease-in')
+        ]),
+        transition(':leave', [
+            animate('600ms ease-out', style({ transform: 'translateX(100%)', opacity: 0}))
+        ])
     ]);
 }
