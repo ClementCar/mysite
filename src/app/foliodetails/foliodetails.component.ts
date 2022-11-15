@@ -11,10 +11,10 @@ import { expand, visibility, flyInOut } from '../animations/app.animation';
   selector: 'app-foliodetails',
   templateUrl: './foliodetails.component.html',
   styleUrls: ['./foliodetails.component.scss'],
-  // host: {
-  //   '[@flyInOut]': 'true',
-  //   'style': 'display: bock;'
-  // },
+  host: {
+    '[@flyInOut]': 'true',
+    'style': 'display: bock;'
+  },
   animations: [
     expand(),
     visibility(),
@@ -38,9 +38,8 @@ export class FoliodetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.projectService.getProjectIds().subscribe(projectIds => this.projectIds = projectIds);
-    this.route.params.pipe(switchMap((params: Params) => {this.visibility = 'hidden'; console.log(this.visibility); return this.projectService.getProject(params['id']);}))
-    .subscribe(project => { this.project = project; this.setPrevNext(project.id); this.visibility= 'shown'; console.log(this.visibility)});
-    console.log(this.visibility)
+    this.route.params.pipe(switchMap((params: Params) => {this.visibility = 'hidden'; return this.projectService.getProject(params['id']);}))
+    .subscribe(project => { this.project = project; this.setPrevNext(project.id); this.visibility= 'shown'});
     this.breakpoint = this.breakpointService.detailBreakpoint();
     this.col = this.breakpointService.detailColspan();
   }
