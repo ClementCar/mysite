@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { flyInOut } from '../animations/app.animation';
+import { flyInOut, expand } from '../animations/app.animation';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +7,11 @@ import { flyInOut } from '../animations/app.animation';
   styleUrls: ['./home.component.scss'],
   host: {
     '[@flyInOut]': 'true',
-    'style': 'display: bock;'
+    'style': 'display: block;'
   },
   animations: [
-    flyInOut()
+    flyInOut(),
+    expand()
   ]
 })
 export class HomeComponent implements OnInit {

@@ -99,7 +99,7 @@
     <!-- <div *ngFor="let project of projects">
         <p>{{project.id}}</p>
     </div> -->
-    <div fxFlex *ngIf="projects">
+    <div fxFlex *ngIf="projects" [@expand]>
         <mat-grid-list cols="2" rowHeight="400px" gutterSize="15px">
             <mat-grid-tile *ngFor="let project of projects" [routerLink]="['/portfolio', project.id]">
                 <img class="grid-img" src="{{project.logo}}" alt="{{project.name}}">

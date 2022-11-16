@@ -4,7 +4,7 @@ export function expand() {
     return trigger('expand', [
         state('*', style({ opacity: 1, transform: 'translateX(0)'})),
         transition(':enter', [
-            style({ transform: 'translateX(-50%)', opacity: 0}),
+            style({ transform: 'translateX(-100%)', opacity: 0}),
             animate('300ms ease-in', style({ opacity: 1, transform: 'translateX(0)'}))
         ])
     ]);
@@ -28,11 +28,11 @@ export function flyInOut() {
     return trigger('flyInOut', [
         state('*', style({ opacity: 1, transform: 'translateX(0)'})),
         transition(':enter', [
-            style({ transform: 'translateX(-100%)', opacity: 0}),
-            animate('600ms ease-in')
+            style({ transform: 'translateX(-100%)', opacity: 0 }),
+            animate('500ms ease-in')
         ]),
         transition(':leave', [
-            animate('600ms ease-out', style({ transform: 'translateX(100%)', opacity: 0}))
+            animate('500ms ease-out', style({ transform: 'translateX(100%)', opacity: 0}))
         ])
     ]);
 }
