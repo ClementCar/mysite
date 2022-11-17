@@ -5,10 +5,6 @@ import { flyInOut } from '../animations/app.animation';
   selector: 'app-cv',
   templateUrl: './cv.component.html',
   styleUrls: ['./cv.component.scss'],
-  host: {
-    '[@flyInOut]': 'true',
-    'style': 'display: bock;'
-  },
   animations: [
     flyInOut()
   ]

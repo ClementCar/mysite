@@ -1,5 +1,5 @@
 <section class="section">
-    <div class="section__bloc" [@expand]>
+    <div class="section__bloc" *ngIf="isShown" [@expand]>
         <div class="section__bloc__first">
             <p class="section__bloc__first__letter">C</p>
             <div class="section__bloc__first__slash"></div>
@@ -11,7 +11,7 @@
                 <span class="section__bloc__first__name__5 section__bloc__first__name__all">t</span>
             </div>
         </div>
-        <div class="section__bloc__last" [@expand]>
+        <div class="section__bloc__last">
             <p class="section__bloc__last__sign">></p>
             <div class="section__bloc__last__surname">
                 <span class="section__bloc__last__surname__7 section__bloc__last__surname__all">a</span>
@@ -24,7 +24,7 @@
             </div>
         </div>
     </div>
-    <div class="section__presentation" [@expand]>
+    <div class="section__presentation" *ngIf="isShown" [@expand]>
         <p>
             Bonjour,<br>
             Bienvenue sur mon site !<br>
@@ -33,7 +33,7 @@
             Bonne Navigation !
         </p>
     </div>
-    <div class="section__social" [@expand]>
+    <div class="section__social" *ngIf="isShown" [@expand]>
         <a class="section__social__phone" href="tel:+33636671813" title="Numéro de téléphone">
             <i class="fa-solid fa-phone"></i>
         </a>

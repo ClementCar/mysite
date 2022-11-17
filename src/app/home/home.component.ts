@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { flyInOut, expand } from '../animations/app.animation';
+import { AnimService } from '../services/anim.service';
 
 @Component({
   selector: 'app-home',
@@ -16,9 +17,13 @@ import { flyInOut, expand } from '../animations/app.animation';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  isShown = false;
+
+  constructor(private animService: AnimService) { }
 
   ngOnInit(): void {
+    this.animService.delay()
+    .subscribe(data => this.isShown = true)
   }
 
 }

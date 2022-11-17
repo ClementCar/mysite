@@ -1,5 +1,5 @@
-<section class="section" [@expand]>
-    <div class="section__file">
+<section class="section">
+    <div class="section__file" *ngIf="isShown" [@expand]>
         <div class="section__file__title">
             <i class="fa-solid fa-chevron-down"></i>
             <p>Dossier</p>
@@ -25,7 +25,7 @@
             </li>
         </ul>
     </div>
-    <div class="section__code">
+    <div class="section__code" *ngIf="isShown" [@expand]>
         <router-outlet></router-outlet>
     </div>
     <a class="section__dld" href="../..//assets/Clément Carcenac.pdf" title="CV PDF" download>
