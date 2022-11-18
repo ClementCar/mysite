@@ -112,6 +112,30 @@
 .section{
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    &__link{
+        margin-top: 30px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        &__my{
+            padding: 5px;
+            background-color: var(--bg-file);
+            text-decoration: none;
+            box-shadow: var(--shadow-box);
+            border: 1px solid yellow;
+            border-radius: 9px;
+            color: var(--text);
+            & i {
+                margin-left: 5px;
+            }
+        }
+    }
+    &__div{
+        margin-top: 30px;
+    }
 }
 
 .grid-img{

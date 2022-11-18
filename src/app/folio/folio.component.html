@@ -99,6 +99,12 @@
     <!-- <div *ngFor="let project of projects">
         <p>{{project.id}}</p>
     </div> -->
+    <div class="section__link" *ngIf="projects" [@expand]>
+        <a class="section__link__my" href="https://github.com/ClementCar/mysite.git" target="_blank" title="Code de ce site">
+            Acceder au code de ce site 
+            <i class="fas fa-external-link"></i>
+        </a>
+    </div>
     <div class="section__div" fxFlex *ngIf="projects" [@expand]>
         <mat-grid-list [cols]="breakpoint" rowHeight="400px" gutterSize="25px">
             <mat-grid-tile *ngFor="let project of projects" [routerLink]="['/portfolio', project.id]">

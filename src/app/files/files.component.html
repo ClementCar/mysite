@@ -28,8 +28,10 @@
     <div class="section__code" *ngIf="isShown" [@expand]>
         <router-outlet></router-outlet>
     </div>
-    <a class="section__dld" href="../..//assets/Clément Carcenac.pdf" title="CV PDF" download>
-        Télécharger au format PDF
-        <i class="fas fa-download"></i>
-    </a>
+    <div class="section__dld" *ngIf="isShown" [@expand]>
+        <a class="section__dld__link" href="../..//assets/Clément Carcenac.pdf" title="CV PDF" download>
+            Télécharger au format PDF
+            <i class="fas fa-download"></i>
+        </a>
+    </div>
 </section>
