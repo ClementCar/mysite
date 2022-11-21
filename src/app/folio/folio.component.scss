@@ -114,6 +114,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    padding-bottom: 30px;
     &__link{
         margin-top: 30px;
         width: 100%;
@@ -149,4 +150,10 @@
 mat-grid-tile{
     border: 1px solid yellow;
     border-radius: 9px;
+}
+
+mat-grid-tile-footer{
+    & h2 {
+        font-size: 20px;
+    }
 }
