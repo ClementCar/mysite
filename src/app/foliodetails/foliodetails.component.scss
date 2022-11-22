@@ -1,6 +1,7 @@
 .section{
     width: 90%;
     margin: 0 auto;
+    margin-top: 30px;
 }
 
 .grid-img, .grid-video{
@@ -17,4 +18,10 @@ mat-card-header {
 mat-card-actions {
     display: flex;
     justify-content: space-between;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

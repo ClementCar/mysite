@@ -1,5 +1,4 @@
 <section class="section" [@visibility]="visibility" [@expand]>
-    <!-- [@visibility]="visibility" -->
     <mat-card *ngIf="project">
         <mat-card-header>
             <mat-card-title>
@@ -11,7 +10,11 @@
         <mat-card-content>
             <mat-grid-list [cols]="breakpoint" rowHeight="200px" (window:resize)="changeSize($event)">
                 <mat-grid-tile rowspan="2"><video class="grid-video" controls src="{{project.video}}"></video></mat-grid-tile>
-                <mat-grid-tile rowspan="{{col}}"><p>{{project.description}}</p></mat-grid-tile>
+                <mat-grid-tile rowspan="{{col}}">
+                    <div class="text">
+                        <p>{{project.description}}</p><a href="{{project.gitlink}}" target="_blank" title="{{project.name}} code">Voir le code</a>
+                    </div>
+                </mat-grid-tile>
                 <mat-grid-tile><img class="grid-img" src="{{project.image}}" alt="{{project.name}}"></mat-grid-tile>
                 <mat-grid-tile><img class="grid-img" src="{{project.image2}}" alt="{{project.name}}"></mat-grid-tile>
             </mat-grid-list>
@@ -20,13 +23,10 @@
             <button mat-button [routerLink]="['/portfolio', prev]">
                 <span class="fa fa-chevron-left fa-lg"></span>
             </button>
-            <button mat-button (click)="goBack()">RETOUR</button>
+            <button mat-button routerLink="/portfolio">RETOUR</button>
             <button mat-button [routerLink]="['/portfolio', next]">
                 <span class="fa fa-chevron-right fa-lg"></span>
             </button>
         </mat-card-actions>
     </mat-card>
 </section>
-<!-- <video controls src="{{project.video}}"></video> -->
-<!-- <video controls><source src="{{project.video}}" type="video/mp4"></video> -->
-<!-- colspan="{{col}}" -->

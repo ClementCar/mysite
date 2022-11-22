@@ -8,7 +8,7 @@ export const PROJECTS: Project[] = [
         image: '../../assets/Groupomania/Log.JPG',
         image2: '../../assets/Groupomania/Post.JPG',
         video: '../../assets/Groupomania/Groupomania.mp4',
-        description: "Création d'un réseau social d'Entreprise",
+        description: "Projet de ma formation Open Classroom. Création d'un réseau social d'entreprise avec SQL et Angular.",
         gitlink: 'https://github.com/ClementCar/Groupomania.git'
     },
     {
@@ -18,7 +18,7 @@ export const PROJECTS: Project[] = [
         image: '../../assets/piiquante/log.JPG',
         image2: '../../assets/piiquante/home.JPG',
         video: '../../assets/piiquante/piiquante.mp4',
-        description: "Construction d'une API",
+        description: "Projet de ma formation Open Classroom. Construction d'une API sécurisée pour application d'avis gastronomiques.",
         gitlink: 'https://github.com/ClementCar/Piiquante.git'
     },
     {
@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
         image: '../../assets/kanap/home.JPG',
         image2: '../../assets/kanap/product.JPG',
         video: '../../assets/kanap/Kanap.mp4',
-        description: "Liaison Front-end / Back-end",
+        description: "Projet de ma formation Open Classroom. Liaison Front-end / Back-end, récupérer des produits d'une API, gérer l'affichage des produits et la commande.",
         gitlink: 'https://github.com/ClementCar/Kanap_5_12-01-22.git'
     },
     {
@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
         image: '../../assets/chouette/Home1.JPG',
         image2: '../../assets/chouette/Home 2.JPG',
         video: '../../assets/chouette/Chouette.mp4',
-        description: "Optimisation SEO d'un site",
+        description: "Projet de ma formation Open Classroom. Analyse SEO d'un site existant puis amélioration du référencement.",
         gitlink: 'https://github.com/ClementCar/Projet-4.git'
     },
     {
@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
         image: '../../assets/myfood/Accueil.JPG',
         image2: '../../assets/myfood/Page.JPG',
         video: '../../assets/myfood/Food-tel.mp4',
-        description: "Dynamisation d'une page Web",
+        description: "Projet de ma formation Open Classroom. Développement d'un site proposant le menu de 4 grands restaurants parisiens et dynamisation du site avec des animations CSS.",
         gitlink: 'https://github.com/ClementCar/ClementCarcenac_3_06122021.git'
     }
 ]
