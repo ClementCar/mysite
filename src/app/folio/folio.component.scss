@@ -37,6 +37,7 @@
     max-height: 70%;
     max-width: 80%;
     background: opacify($color: white, $amount: 0.9);
+    border-radius: 9px;
 }
 
 mat-grid-tile{
